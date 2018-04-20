@@ -1,0 +1,41 @@
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+
+driver = webdriver.Chrome()
+driver.get('Web_site')
+
+
+
+wait = WebDriverWait(driver, 40)
+element = wait.until(EC.element_to_be_clickable((By.XPATH, '//xpath')))
+driver.find_element(By.XPATH,'//xpath').clear()
+driver.find_element(By.XPATH,'//xpath').send_keys('CAdmin@mail.com')
+driver.find_element(By.XPATH,'//xpath').clear()
+driver.find_element(By.XPATH,'//xpath').send_keys('1234qwer')
+driver.find_element(By.XPATH,'//xpath').send_keys(Keys.ENTER)
+wait = WebDriverWait(driver, 40)
+element = wait.until(EC.element_to_be_clickable((By.XPATH,'//xpath')))
+driver.find_element(By.XPATH,'//xpath').click()
+# driver.implicitly_wait(7)
+time.sleep(1)
+driver.find_element(By.XPATH,'xpath').send_keys('12345678901')
+driver.find_element(By.XPATH,'xpath').click()
+driver.find_element(By.XPATH,'xpath').send_keys(Keys.DOWN) \\If dropdown menu
+driver.find_element(By.XPATH,'xpath').send_keys(Keys.ENTER) \\If dropdown menu
+driver.find_element(By.XPATH,'xpath').send_keys('Patient')
+driver.find_element(By.XPATH,'xpath').send_keys('New')
+driver.find_element(By.XPATH,'xpath').send_keys('a@a.com')
+driver.find_element(By.XPATH,'xpath').send_keys('5558888')
+driver.find_element(By.XPATH,'xpath').send_keys('Street')
+driver.find_element(By.XPATH,'xpath').click()
+driver.find_element(By.XPATH,'xpath').send_keys(Keys.DOWN)
+driver.find_element(By.XPATH,'xpath').send_keys(Keys.ENTER)
+driver.find_element(By.XPATH,'xpath').click()
+driver.find_element(By.XPATH,'xpath').send_keys(Keys.UP)
+driver.find_element(By.XPATH,'xpath').send_keys(Keys.ENTER)
+driver.find_element(By.XPATH,'xpath').click()
