@@ -1,0 +1,16 @@
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+driver = webdriver.Chrome()
+driver.maximize_window()
+driver.get('https://rozetka.com.ua/')
+
+wait = WebDriverWait(driver, 40)
+driver.find_element(By.XPATH,'//*[@id="3361"]/a').click()
+driver.find_element(By.XPATH,'//*[@id="menu_categories_left"]/li[1]/p/a').click()
+driver.find_element(By.XPATH,'//*[@id="menu_categories_left"]/li[1]/div/a[1]').click()
+driver.find_element(By.CLASS_NAME,'<div class="g-i-tile g-i-tile-catalog" data-view_type="catalog_with_hover">/div>')
